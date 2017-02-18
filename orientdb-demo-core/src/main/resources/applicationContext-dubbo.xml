@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd ">
+
+       <dubbo:application name="orientdb-demo-core"/>
+
+       <dubbo:registry id="dubboRegistry" address="${dubbo.address}" />
+       <!-- 该变量请配置在tomcat的 catalina.properties 中-->
+       <dubbo:protocol name="dubbo" port="${env.dubbo.port}" />
+
+       <!--
+        accepts - 确定dubbo提供方服务器可以接受的最大连接数，以防服务提供方雪崩
+        threads - dubbo默认采用单一长连接+nio, 配合线程池对并发请求进行处理，不要设置过大
+       -->
+       <dubbo:provider delay="-1" timeout="5000" cluster="failover" retries="0"
+                       threadpool="fixed" threads="50" accepts="200"
+                       loadbalance="random" protocol="dubbo"
+                       registry="dubboRegistry"
+                       owner="myname" />
+       <!--若需要添加filter请在pom中依赖 me-fm-dubbo-ext-->
+       <!--filter="default,accesslogext"-->
+
+       <dubbo:service interface="cn.memedai.orientdb-demo.facade.businesses.XXX" ref="XXX"
+                      version="1.0.0"/>
+
+</beans>

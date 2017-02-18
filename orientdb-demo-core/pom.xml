@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>orientdb-demo-core</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>orientdb-demo - Core</name>
+    <url>http://www.memedai.cn</url>
+
+    <parent>
+        <groupId>cn.memedai</groupId>
+        <artifactId>root-spring-hibernate</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.memedai</groupId>
+            <artifactId>orientdb-demo-facade</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.memedai.framework</groupId>
+            <artifactId>me-fm-access-control</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.memedai.framework</groupId>
+            <artifactId>me-fm-hibernate</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.orientechnologies</groupId>
+            <artifactId>orientdb-client</artifactId>
+            <version>2.2.15</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.orientechnologies/orientdb-graphdb -->
+        <dependency>
+            <groupId>com.orientechnologies</groupId>
+            <artifactId>orientdb-graphdb</artifactId>
+            <version>2.2.15</version>
+        </dependency>
+        <dependency>
+            <groupId>com.orientechnologies</groupId>
+            <artifactId>orientdb-enterprise</artifactId>
+            <version>2.2.0-beta</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.tinkerpop.blueprints/blueprints-core -->
+        <dependency>
+            <groupId>com.tinkerpop.blueprints</groupId>
+            <artifactId>blueprints-core</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.tinkerpop/pipes -->
+        <dependency>
+            <groupId>com.tinkerpop</groupId>
+            <artifactId>pipes</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.tinkerpop.gremlin/gremlin-java -->
+        <dependency>
+            <groupId>com.tinkerpop.gremlin</groupId>
+            <artifactId>gremlin-java</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.tinkerpop.gremlin/gremlin-groovy -->
+        <dependency>
+            <groupId>com.tinkerpop.gremlin</groupId>
+            <artifactId>gremlin-groovy</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all -->
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>2.4.8</version>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/net.java.dev.jna/jna-platform -->
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna-platform</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.googlecode.concurrentlinkedhashmap/concurrentlinkedhashmap-lru -->
+        <dependency>
+            <groupId>com.googlecode.concurrentlinkedhashmap</groupId>
+            <artifactId>concurrentlinkedhashmap-lru</artifactId>
+            <version>1.4.2</version>
+        </dependency>
+    </dependencies>
+
+</project>

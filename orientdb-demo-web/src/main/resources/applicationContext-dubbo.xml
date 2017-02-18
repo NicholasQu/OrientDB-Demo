@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd ">
+
+    <dubbo:application name="orientdb-demo-web"/>
+
+    <dubbo:registry id="dubboRegistry" address="${dubbo.address}" />
+    <!-- 该变量请配置在tomcat的 catalina.properties 中-->
+    <dubbo:protocol name="dubbo" port="${env.dubbo.port}" />
+    <dubbo:consumer check="false" />
+    <!--若需要添加filter请在pom中依赖 me-fm-dubbo-ext-->
+    <!--filter="default,accesslogext"-->
+
+    <dubbo:reference interface="cn.memedai.orientdb-demo.facade.businesses.XXX" id="XXX"
+                    version="1.0.0" />
+
+</beans>
